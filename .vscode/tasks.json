@@ -18,6 +18,7 @@
   ]
 }
 */
+
 {
   "version": "2.0.0",
   "tasks": [
@@ -27,7 +28,7 @@
       "command": "bash",
       "args": [
         "-lc",
-        "gcc \"${fileBasename}\" -o a $(pkg-config --cflags --libs gtk4)"
+        "cd \"${fileDirname}\" && gcc \"${fileBasename}\" -o a $(pkg-config --cflags --libs gtk4)"
       ],
       "problemMatcher": ["$gcc"],
       "group": {

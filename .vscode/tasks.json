@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build and run",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "gcc tfv2.c -o a $(pkg-config --cflags --libs gtk4) && ./a"
+      ],
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
